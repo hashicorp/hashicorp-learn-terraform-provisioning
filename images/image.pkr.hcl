@@ -3,9 +3,9 @@
 
 packer {
   required_plugins {
-    vsphere = {
-      version = ">= 1.2.3"
-      source  = "github.com/hashicorp/vsphere"
+    amazon = {
+      version = "~> 1"
+      source  = "github.com/hashicorp/amazon"
     }
   }
 }
