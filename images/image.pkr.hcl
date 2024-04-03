@@ -3,7 +3,7 @@
 
 packer {
   required_plugins {
-    vsphere = {
+    amazon = {
       version = "~> 1"
       source  = "github.com/hashicorp/amazon"
     }
