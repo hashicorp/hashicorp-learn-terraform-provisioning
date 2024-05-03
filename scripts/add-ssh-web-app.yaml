@@ -21,7 +21,7 @@ users:
 
 # Downloads the golang package
 packages:
-  - golang-go
+  - golang
 
 # Sets the GOPATH & downloads the demo payload
 runcmd:
@@ -29,4 +29,6 @@ runcmd:
   - sudo mkdir /home/terraform/go
   - sudo chown terraform:hashicorp /home/terraform/go
   - export GOPATH=/home/terraform/go
-  - go get github.com/hashicorp/learn-go-webapp-demo
+  - export HOME=/home/terraform/
+  - go install github.com/hashicorp/learn-go-webapp-demo@latest
+  - curl --output-dir /home/terraform --remote-name https://raw.githubusercontent.com/hashicorp/learn-go-webapp-demo/master/index.html
